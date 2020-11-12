@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="form-group">
+    <label>Enter Form Name</label>
+    <input type="text" class="form-control" [(ngModel)]="formfields.form_name">
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <form>
+        <div class="form-group" *ngIf="formfields.f_name">
+          <label>First Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.m_name">
+          <label>Middle Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.l_name">
+          <label>Last Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="form-group" *ngIf="formfields.address">
+          <label>Address</label>
+          <input type="text-area" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.gender">
+          <label>Gender</label>
+          <input type="text-area" class="form-control">
+        </div>
+
+        <div class="form-group" *ngIf="formfields.dob">
+          <label>Date-of-birth</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="form-group"*ngIf="formfields.secondary">
+          <label>Secondary</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.high_secondary">
+          <label>Higher Secondary</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.graduation">
+          <label>Graduation</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.post_graduation">
+          <label>Post-Graduation</label>
+          <input type="text" class="form-control">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <p class="font-weight-bold">Please check all the fields you want to add in your Form</p>
+      <form>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="f_name" (change)="toggleCheck($event)">
+          </div>
+          First Name
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="m_name" (change)="toggleCheck($event)">
+          </div>
+          Middle Name
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="l_name" (change)="toggleCheck($event)">
+          </div>
+          Last Name
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="address" (change)="toggleCheck($event)">
+          </div>
+          Address
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="gender" (change)="toggleCheck($event)">
+          </div>
+          Gender
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input"id="secondary" (change)="toggleCheck($event)">
+          </div>
+          Secondary Qualification
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="high_secondary" (change)="toggleCheck($event)">
+          </div>
+          Higher Secondary Qualification
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="graduation" (change)="toggleCheck($event)">
+          </div>
+          Graduation
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="post_graduation" (change)="toggleCheck($event)">
+          </div>
+          Post Graduation
+        </div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input" id="dob" (change)="toggleCheck($event)">
+          </div>
+            Date Of Birth
+          </div>
+    </form>
+  </div>
+  <button  (click)="saveForm()">Save Form</button>
+
+</div>

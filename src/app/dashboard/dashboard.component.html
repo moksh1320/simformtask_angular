@@ -1,0 +1,13 @@
+<div class="container">
+  <p class="text-center">{{user_name}}'s Dashboard</p>
+
+  <button type="button" class="btn btn-success" routerLink="/nav/formcreator">create new form</button>
+
+  <p class="text-left">Your All Forms</p>
+
+  <div *ngFor="let item of userallforms">
+    <button type="button" class="btn btn-dark" style="margin: 20px;"
+      (click)="openform(item)">{{item.form_name}}</button>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+</div>

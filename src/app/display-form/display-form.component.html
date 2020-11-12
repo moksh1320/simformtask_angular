@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="form-group">
+    <label>{{formfields.form_name}}</label>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <form>
+        <div class="form-group" *ngIf="formfields.f_name">
+          <label>First Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.m_name">
+          <label>Middle Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.l_name">
+          <label>Last Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="form-group" *ngIf="formfields.address">
+          <label>Address</label>
+          <input type="text-area" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.gender">
+          <label>Gender</label>
+          <input type="text-area" class="form-control">
+        </div>
+
+        <div class="form-group" *ngIf="formfields.dob">
+          <label>Date-of-birth</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.secondary">
+          <label>Secondary</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.high_secondary">
+          <label>Higher Secondary</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.graduation">
+          <label>Graduation</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group" *ngIf="formfields.post_graduation">
+          <label>Post-Graduation</label>
+          <input type="text" class="form-control">
+        </div>
+      </form>
+    </div>
+  </div>
